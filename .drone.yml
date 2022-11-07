@@ -9,5 +9,6 @@ steps:
   - python3 -m venv venv
   - source venv/bin/activate
   - pip3 install -r requirements.txt 
-  - python3 main.py --aws_profile_name production-aws-account --aws_region_name us-west-1 --secret_name sonic_user_creds --vlan_id 600 --switch_ip 192.168.1.122
+  - source /home/ben/.aws/export_aws_creds.sh  
+  - python3 main.py --aws_region_name us-west-1 --secret_name sonic_user_creds --vlan_id 600 --switch_ip 192.168.1.122
 
